@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+@theme {
+  --color-purple: #7c5dfa;
+  --color-purple-light: #9277ff;
+  --color-dark-purple: #1e2139;
+  --color-very-dark-blue: #141625;
+  --color-light-bg: #f8f8fb;
+  --color-grayish-blue: #888eb0;
+  --color-dark-gray: #7e88c3;
+  --color-black-text: #0c0e16;
+  --color-red-custom: #ec5757;
+  --color-red-light: #ff9797;
+
+  --font-spartan: "League Spartan", sans-serif;
+}
+
+/* Core user experience layouts and seamless switching between modes.*/
+@layer base {
+  body {
+    background-color: var(--color-light-bg);
+    color: var(--color-black-text);
+    font-family: var(--font-spartan);
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+}
+
+/* Enable dark mode based on the `.dark` class added to the `html` or `body` element. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c5dfa, #9277ff);
+  border-radius: 10px;
+}
