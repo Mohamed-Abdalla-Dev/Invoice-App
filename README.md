@@ -2,6 +2,9 @@
 
 A web application for managing invoices, built with React and TypeScript. Browse and filter invoices, create and edit invoices, delete them, and track their status and amounts due. The responsive interface supports both light and dark themes.
 
+## 📸 Preview
+![preview](/public/Screenshot%20(399).png)
+
 > **Note:** This is a frontend demo with no backend or database connection. Invoice data and the theme preference are stored in the browser's `localStorage`. Sample invoices are loaded when the app is used for the first time.
 
 ## Features
